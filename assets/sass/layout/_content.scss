@@ -1,0 +1,40 @@
+//main content
+.content{
+  &__text{
+    padding: 3rem;
+  }
+  &__title{
+    font-family: $old-standard;
+    font-size: $font-size-xxx-large;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &__paragraph{
+    font-family: $raleway;
+    color: $granite-gray;
+    line-height: 2;
+  }
+}
+
+.header {
+  background: url(/assets/images/imagen1.png);
+  height: 50vh;
+  background-size: cover;
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .content {
+    width: 45%;
+    height: 100vh;
+    // position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+  }
+
+  .header {
+    width: 55%;
+    float: right;
+    height: 100vh;
+  }
+}
