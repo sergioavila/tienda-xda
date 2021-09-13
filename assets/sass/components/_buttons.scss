@@ -1,0 +1,16 @@
+.button{
+    padding: 0.8em 1em;
+    display: inline-block;
+    border: 1px solid $smoky-black;
+    color: $smoky-black;
+    text-decoration: none;
+    font-family: $raleway;
+    font-weight: $semi-bold;
+    &:hover{
+        border-color: $quick-silver;
+    }
+    &:focus{
+        border-color: $quick-silver;
+        color: $quick-silver;
+    }
+}

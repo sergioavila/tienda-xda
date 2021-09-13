@@ -48,6 +48,71 @@ table {
   border-spacing: 0;
 }
 
+.nav {
+  height: 80px;
+  justify-content: space-between;
+}
+.nav__toggler {
+  position: absolute;
+  left: -100vw;
+}
+.nav__label {
+  position: absolute;
+  right: 2em;
+  top: 1.5em;
+}
+.nav__links {
+  max-height: 0;
+  overflow: hidden;
+  background: #FFF;
+}
+.nav__links li {
+  background: #FFF;
+}
+#toggler:checked ~ .nav__links {
+  max-height: 450px;
+  transition: max-height 0.3s ease-in;
+}
+.nav__brand {
+  background: #0C0910;
+  color: #FFF;
+  font-family: "Old Standard TT", serif;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 1em 0.5em;
+  line-height: 1.4em;
+  display: inline-block;
+}
+.nav__link {
+  background: #FFF;
+  display: block;
+  font-size: 1em;
+  color: #0C0910;
+  text-decoration: none;
+  padding: 2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+  .nav__label {
+    display: none;
+  }
+  .nav__links {
+    display: flex;
+    padding-right: 3em;
+  }
+  .nav__links {
+    height: auto;
+    max-height: 80px;
+  }
+}
+.content {
+  position: relative;
+}
 .content__text {
   padding: 3rem;
 }
@@ -62,9 +127,12 @@ table {
   color: #646266;
   line-height: 2;
 }
+.content__btn {
+  margin-top: 4em;
+}
 
 .header {
-  background: url(/assets/images/imagen1.png);
+  background: url(../images/image1.png);
   height: 50vh;
   background-size: cover;
 }
@@ -72,13 +140,13 @@ table {
 @media (min-width: 992px) {
   .content {
     width: 45%;
-    height: 100vh;
+    height: calc(100vh - 80px);
   }
 
   .header {
     width: 55%;
     float: right;
-    height: 100vh;
+    height: calc(100vh - 80px);
   }
 }
 .content__newsletter {
@@ -126,6 +194,22 @@ table {
     width: 45%;
     bottom: 0;
   }
+}
+.button {
+  padding: 0.8em 1em;
+  display: inline-block;
+  border: 1px solid #0C0910;
+  color: #0C0910;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+.button:hover {
+  border-color: #A6A5A8;
+}
+.button:focus {
+  border-color: #A6A5A8;
+  color: #A6A5A8;
 }
 
 /*# sourceMappingURL=main.css.map */

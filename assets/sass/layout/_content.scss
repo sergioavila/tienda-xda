@@ -1,5 +1,6 @@
 //main content
 .content{
+  position: relative;
   &__text{
     padding: 3rem;
   }
@@ -14,10 +15,13 @@
     color: $granite-gray;
     line-height: 2;
   }
+  &__btn{
+    margin-top: 4em;
+  }
 }
 
 .header {
-  background: url(/assets/images/imagen1.png);
+  background: url(../images/image1.png);
   height: 50vh;
   background-size: cover;
 }
@@ -25,16 +29,12 @@
 @media (min-width: $breakpoint-desktop) {
   .content {
     width: 45%;
-    height: 100vh;
-    // position: relative;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
+    height: calc(100vh - 80px);
   }
 
   .header {
     width: 55%;
     float: right;
-    height: 100vh;
+    height: calc(100vh - 80px);
   }
 }

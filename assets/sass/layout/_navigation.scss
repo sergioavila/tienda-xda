@@ -1,0 +1,62 @@
+.nav{
+    height: 80px;
+    justify-content: space-between;
+    &__toggler{
+        position: absolute;
+        left: -100vw;
+    }
+    &__label{
+        position: absolute;
+        right: 2em;
+        top: 1.5em;
+    }
+    &__links{
+        max-height: 0;
+        overflow: hidden;
+        background: $white;
+        li{
+            background: $white;
+        }
+    }
+    #toggler:checked ~ &__links {
+        max-height: 450px;
+        transition: max-height 0.3s ease-in;
+    }
+    &__brand{
+        background: $smoky-black;
+        color: $white;
+        font-family: $old-standard;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 1em 0.5em;
+        line-height: 1.4em;
+        display: inline-block;
+    }
+    &__link{
+        background: $white;
+        display: block;
+        font-size: 1em;
+        color: $smoky-black;
+        text-decoration: none;
+        padding: 2em;
+        font-family: $raleway;
+        font-weight: $bold;
+    }
+}
+@media (min-width: $breakpoint-tablet) {
+    .nav{
+        display: flex;
+        &__label{
+            display: none;
+        }
+        &__links{
+            display: flex;
+            padding-right: 3em;
+        }
+        &__links{
+            height: auto;
+            max-height: 80px;
+        }
+    }
+    
+  }

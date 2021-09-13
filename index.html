@@ -3,7 +3,7 @@
   <head>
     <title>Tienda XDA</title>
     <meta charset="UTF-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/cbd62100f2.js"
@@ -11,8 +11,55 @@
     ></script>
 
     <!-- NOTA: Esto es parte de la configuración de codesandox -->
-    <link rel="stylesheet" type="text/css" href="assets/sass/main.scss" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
 
-  <body></body>
+  <body>
+  <nav class="nav">
+    <a href="#" class="nav__brand">
+      XDA
+    </a>
+    <label class="nav__label" for="toggler">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
+    </label>
+    <input type="checkbox" id="toggler" class="nav__toggler">
+    <ul class="nav__links">
+      <li>
+        <a href="#" class="nav__link">Mujer</a>
+      </li>
+      <li>
+        <a href="#" class="nav__link">Hombre</a>
+      </li>
+      <li>
+        <a href="#" class="nav__link">Accesorios</a>
+      </li>
+      <li>
+        <a href="#" class="nav__link">Blog</a>
+      </li>
+    </ul>
+  </nav>
+  
+    <main>
+      <header class="header"></header>
+      <section class="content">
+        <div class="content__text">
+          <h1 class="content__title">Lorem Ipsum Ad Valorem</h1>
+          <p class="content__paragraph">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum odio deserunt aspernatur voluptates iure amet commodi facere veniam eos id alias eum neque repellat dolore temporibus tempora, quasi unde veritatis?
+          </p> 
+          <a href="#" class="button content__btn">Ir a la tienda</a>
+        </div>
+      </section>
+      <footer class="content__newsletter">
+        <form action="" class="content__form">
+          <h2>Newsletter</h2>
+          <label for="email">Correo Electrónico</label>
+          <input type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico"/>
+        </form>
+        <p class="content__subscription">Suscribir</p>
+      </footer>
+    </main>
+    
+  
+  </body>
 </html>
