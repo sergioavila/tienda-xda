@@ -1,5 +1,5 @@
 .nav{
-    height: 80px;
+    height: auto;
     justify-content: space-between;
     &__toggler{
         position: absolute;
@@ -14,6 +14,10 @@
         max-height: 0;
         overflow: hidden;
         background: $white;
+        display: block;
+        position: absolute;
+        width: 100%;
+        text-align: center;
         li{
             background: $white;
         }
@@ -45,17 +49,20 @@
 }
 @media (min-width: $breakpoint-tablet) {
     .nav{
-        display: flex;
+        display: inline-flex;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
         &__label{
             display: none;
         }
         &__links{
             display: flex;
+            position: relative;
             padding-right: 3em;
-        }
-        &__links{
             height: auto;
             max-height: 80px;
+            width: auto;
         }
     }
     
